@@ -19,22 +19,29 @@
         <div class="row">
             <div class="col">
                 <label class="lead">To Do</label>
-                <ul id="todoBox" class="list-group">
-                    <li class="list-group-item list-group-item-action list-group-item-info">Test Task</li>
-                    <button id="todoButton" class="btn btn-info">Add a task</button>
+                <p id="todoNum"></p>
+                <hr>
+                <ul id="todoBox" class="list-group task-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <li id="1" class="list-group-item list-group-item-action list-group-item-info" draggable="true" ondragstart="drag(event)">Test Task1</li>
+                    <li id="2" class="list-group-item list-group-item-action list-group-item-info" draggable="true" ondragstart="drag(event)">Test Task2</li>
                 </ul>
+                <button id="todoButton" class="btn btn-info">Add a task</button>
             </div>
             <div class="col">
                 <label class="lead">In Progress</label>
-                <ul id="progressBox" class="list-group">
-                    <button id="progressButton" class="btn btn-info">Add a task</button>
+                <p id="progressNum"></p>
+                <hr>
+                <ul id="progressBox" class="list-group task-box" ondrop="drop(event)" ondragover="allowDrop(event)">
                 </ul>
+                <button id="progressButton" class="btn btn-info">Add a task</button>
             </div>
             <div class="col">
                 <label class="lead">Done</label>
-                <ul id="doneBox" class="list-group">
-                    <button id="doneButton" class="btn btn-info">Add a task</button>
+                <p id="doneNum"></p>
+                <hr>
+                <ul id="doneBox" class="list-group task-box" ondrop="drop(event)" ondragover="allowDrop(event)">
                 </ul>
+                <button id="doneButton" class="btn btn-info">Add a task</button>
             </div>
         </div>
     </div>
@@ -46,8 +53,9 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
         crossorigin="anonymous"></script>
-    <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
     <script src="script.js"></script>
+    <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+
 </body>
 
 </html>
