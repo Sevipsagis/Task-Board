@@ -1,0 +1,17 @@
+body{
+    background-color: #1a2c5b;
+}
+h1{
+    color: #b8dff0;
+    margin: 20px 0 20px 0;
+}
+label{
+    color: #b8dff0;
+}
+.col{
+    padding: 20px 20px 20px 20px;
+}
+.col{
+    background-color: #3e4e88;
+    height: 85vh
+}
