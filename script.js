@@ -31,9 +31,7 @@ $(document).ready(() => {
         var taskText = document.createTextNode(taskDesc);
         taskList.appendChild(taskText);
         taskList.setAttribute("id", ID_NUMBER);
-        taskList.classList.add("list-group-item");
-        taskList.classList.add("list-group-item-action");
-        taskList.classList.add("list-group-item-info");
+        taskList.classList.add("list-group-item", "list-group-item-action", "list-group-item-info");
         taskList.setAttribute("draggable", true);
         taskList.setAttribute("ondragstart", "drag(event)");
         ID_NUMBER++;
