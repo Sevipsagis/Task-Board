@@ -1,9 +1,16 @@
 body{
     background-color: #1a2c5b;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 h1{
     color: #b8dff0;
-    margin: 20px 0 20px 0;
+    margin: 30px 0 20px 0;
 }
 p{
     color: #b8dff0;
@@ -34,5 +41,9 @@ button{
     width: 100%;
     color: white !important;
     background-color: #7971ea !important;
+}
+
+button:hover{
+    opacity: 0.7;
 }
 
