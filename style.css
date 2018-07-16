@@ -6,16 +6,17 @@ h1{
     margin: 20px 0 20px 0;
 }
 p{
-    color: white;
+    color: #b8dff0;
 }
 label{
-    color: #b8dff0;
+    color: white;
 }
 ul{
     padding: 25px 25px 25px 25px;
 }
 li{
     margin: 5px 0 5px 0 !important;
+    border-radius: 5px !important;
 }
 hr{
     border: .5px solid #b8dff0;
@@ -23,12 +24,15 @@ hr{
 }
 .col{
     padding: 20px 20px 20px 20px;
-}
-.col{
     background-color: #3e4e88;
-    height: 85vh
+    height: 85vh;
+    margin-right: 10px;
+    border-radius: 10px;
 }
 
 button{
     width: 100%;
+    color: white !important;
+    background-color: #7971ea !important;
 }
+

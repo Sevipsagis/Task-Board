@@ -9,12 +9,12 @@ function drag(event) {
 function drop(event) {
     event.preventDefault();
     var data = event.dataTransfer.getData("text");
-    if(event.target.classList.contains("task-box")){
+    if (event.target.classList.contains("task-box")) {
         event.target.appendChild(document.getElementById(data));
         updateTask();
     }
 };
-function updateTask(){
+function updateTask() {
     var todoTask = todoBox.childElementCount;
     var progressTask = progressBox.childElementCount;
     var doneTask = doneBox.childElementCount;
@@ -26,7 +26,7 @@ function updateTask(){
 $(document).ready(() => {
     updateTask();
     var ID_NUMBER = 1;
-    function addTask(taskDesc){
+    function addTask(taskDesc) {
         var taskList = document.createElement("li");
         var taskText = document.createTextNode(taskDesc);
         taskList.appendChild(taskText);
@@ -37,22 +37,28 @@ $(document).ready(() => {
         ID_NUMBER++;
         return taskList;
     }
-    $("#todoButton").on("click", function(){
+    $("#todoButton").on("click", function () {
         var desc = prompt("Type a name for your task....");
-        var item = addTask(desc);
-        todoBox.appendChild(item);
-        updateTask();
+        if (desc != "" && desc != null) {
+            var item = addTask(desc);
+            todoBox.appendChild(item);
+            updateTask();
+        }
     });
-    $("#progressButton").on("click", function(){
+    $("#progressButton").on("click", function () {
         var desc = prompt("Type a name for your task....");
-        var item = addTask(desc);
-        progressBox.appendChild(item);
-        updateTask();
+        if (desc != "" && desc != null) {
+            var item = addTask(desc);
+            progressBox.appendChild(item);
+            updateTask();
+        }
     });
-    $("#doneButton").on("click", function(){
+    $("#doneButton").on("click", function () {
         var desc = prompt("Type a name for your task....");
-        var item = addTask(desc);
-        doneBox.appendChild(item);
-        updateTask();
+        if (desc != "" && desc != null) {
+            var item = addTask(desc);
+            doneBox.appendChild(item);
+            updateTask();
+        }
     });
 });
