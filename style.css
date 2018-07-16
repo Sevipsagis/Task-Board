@@ -10,7 +10,7 @@ body{
 }
 h1{
     color: #b8dff0;
-    margin: 30px 0 20px 0;
+    margin: 40px 0 30px 0;
 }
 p{
     color: #b8dff0;
@@ -32,18 +32,18 @@ hr{
 .col{
     padding: 20px 20px 20px 20px;
     background-color: #3e4e88;
-    height: 85vh;
+    height: 80vh;
     margin-right: 10px;
     border-radius: 10px;
 }
 
-button{
+button.addButton{
     width: 100%;
     color: white !important;
     background-color: #7971ea !important;
 }
 
-button:hover{
+button.addButton:hover{
     opacity: 0.7;
 }
 

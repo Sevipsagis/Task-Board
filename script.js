@@ -11,8 +11,12 @@ function drop(event) {
     var data = event.dataTransfer.getData("text");
     if (event.target.classList.contains("task-box")) {
         event.target.appendChild(document.getElementById(data));
-        updateTask();
     }
+    else if(event.target.classList.contains("bodyArea")){
+        $(`#${data}`).remove();
+
+    }
+    updateTask();
 };
 function updateTask() {
     var todoTask = todoBox.childElementCount;
@@ -37,9 +41,11 @@ $(document).ready(() => {
         ID_NUMBER++;
         return taskList;
     }
+    
+
     $("#todoButton").on("click", function () {
         var desc = prompt("Type a name for your task....");
-        if (desc != "" && desc != null && todoBox.childElementCount < 11) {
+        if (desc != "" && desc != null && todoBox.childElementCount < 10) {
             var item = addTask(desc);
             todoBox.appendChild(item);
             updateTask();
@@ -47,7 +53,7 @@ $(document).ready(() => {
     });
     $("#progressButton").on("click", function () {
         var desc = prompt("Type a name for your task....");
-        if (desc != "" && desc != null && progressBox.childElementCount < 11) {
+        if (desc != "" && desc != null && progressBox.childElementCount < 10) {
             var item = addTask(desc);
             progressBox.appendChild(item);
             updateTask();
@@ -55,7 +61,7 @@ $(document).ready(() => {
     });
     $("#doneButton").on("click", function () {
         var desc = prompt("Type a name for your task....");
-        if (desc != "" && desc != null && doneBox.childElementCount < 11) {
+        if (desc != "" && desc != null && doneBox.childElementCount < 10) {
             var item = addTask(desc);
             doneBox.appendChild(item);
             updateTask();
